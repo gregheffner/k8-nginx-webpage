@@ -55,7 +55,7 @@ data:
             <h2>I also have a YouTube channel:</h2>
             <ul>
                 <li><a href="https://www.youtube.com/channel/UC1vfbsGFZC8-KCWGQuYfEOw">Technotuba_live_streams</a></li>
-                <p> Its mostly games with my family. By games, mostly Fortnite LOL</p>
+                <p> Its mostly games with my family. By games, mostly Fortnite hahaha</p>
                 <p> Discord link in youtube bio</p>
                </ul>
             <h2>You cant be a nerd without a Weather Station:</h2>
@@ -79,5 +79,5 @@ metadata:
   creationTimestamp: "2024-05-24T15:22:29Z"
   name: www-configmap
   namespace: default
-  resourceVersion: "151272"
+  resourceVersion: "186571"
   uid: 04f57f37-1122-4539-814d-14c47c6a9cc1
