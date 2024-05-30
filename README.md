@@ -73,7 +73,7 @@ systemctl enable docker
 ```
 ## Step 4: Initialize Kubernetes
 ```bash
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+sudo kubeadm init --pod-network-cidr=10.69.0.0/16
 ```
 
 # Copy the ubeadm join full command and save for later
