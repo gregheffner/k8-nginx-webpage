@@ -77,7 +77,7 @@ systemctl enable docker
 
 # On the main server only run the following commands: 
 
-## Step 4: Initialize Kubernetes
+## Initialize Kubernetes
 ```bash
 sudo kubeadm init --pod-network-cidr=10.69.0.0/16
 ```
@@ -85,7 +85,7 @@ sudo kubeadm init --pod-network-cidr=10.69.0.0/16
 # VERY IMPORTANT
 ## Copy the cubeadm join full command and save for later 
 
-## Step 5: Configure Kubernetes
+## SConfigure Kubernetes
 ```bash
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
