@@ -15,12 +15,6 @@ Once you have Kubernetes installed and running, download the four files in this 
 
 1. Clone this repository to your local machine using the following command:
 
-```bash
-git clone <repository-url>
-
-```bash
-git clone this URL
-```
 2. Navigate to the directory containing the YAML files:
 
 3. Apply each YAML file using the kubectl apply -f <filename> command. Here are the commands for each file:
