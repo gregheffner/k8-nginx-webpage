@@ -1,5 +1,7 @@
 # Kubernetes Installation Guide on Ubuntu 22.04
 
+There are 3 readme.md files (steps) in this repo. This one shows how to install. The second step configures the cluster. The third step sets up monitoring with Lens. 
+
 ## Prerequisites
 -Three servers running an Ubuntu OS I used a VM and 2 physical PC's reimaged 
 -Minimum 2 GB RAM and 2 Core CPUs on each node
