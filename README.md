@@ -1,7 +1,7 @@
 # Kubernetes Installation Guide on Ubuntu 22.04
 
 ## Prerequisites
--Three servers running an Ubuntu OS
+-Three servers running an Ubuntu OS I used a VM and 2 physical PC's reimaged 
 -Minimum 2 GB RAM and 2 Core CPUs on each node
 -A root password configured on each server
 
