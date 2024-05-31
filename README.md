@@ -7,12 +7,14 @@ There are 3 readme.md files (steps) in this repo. This one shows how to install.
 -Minimum 2 GB RAM and 2 Core CPUs on each node
 -A root password configured on each server
 
+
+The following steps will be done on all servers. 
+
 ## Update System Packages
 First, update the system packages with the following command:
 ```bash
 sudo apt-get update
 ```
-
 ## Step 1 – Disable Swap and Enable IP Forwarding
 First, turn swap off:
 ```bash
@@ -73,6 +75,9 @@ systemctl daemon-reload
 systemctl restart docker
 systemctl enable docker
 ```
+
+On the main server only run the following commands: 
+
 ## Step 4: Initialize Kubernetes
 ```bash
 sudo kubeadm init --pod-network-cidr=10.69.0.0/16
@@ -92,13 +97,14 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
-
+Go back to your other two servers and run this:
 ## Step 7 – Join Worker Nodes to the Kubernetes Cluster
 Your cubeadm join command should look like this:
 ```bash
 kubeadm join 192.168.1.1:6989 --token blahhhxx5t2f66cpqz8e --discovery-token-ca-cert-hash shaxxxxxxxxxxxxxxxxxxxx
 ```
 
+Go back to main server and validate
 ## Step 8: Verify Installation
 ```bash
 kubectl get pods --all-namespaces
