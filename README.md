@@ -3,12 +3,11 @@
 There are 3 readme.md files (steps) in this repo. This one shows how to install. The second step configures the cluster. The third step sets up monitoring with Lens. 
 
 ## Prerequisites
--Three servers running an Ubuntu OS I used a VM and 2 physical PC's reimaged 
--Minimum 2 GB RAM and 2 Core CPUs on each node
--A root password configured on each server
+1. Three servers running an Ubuntu OS I used a VM and 2 physical PC's reimaged 
+2. Minimum 2 GB RAM and 2 Core CPUs on each node
+3. A root password configured on each server
 
-
-The following steps will be done on all servers. 
+# The following steps will be done on all servers. 
 
 ## Update System Packages
 First, update the system packages with the following command:
@@ -56,7 +55,7 @@ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/
 sudo apt-get update -y
 sudo apt-get install kubelet kubeadm kubectl -y
 ```
-Next, you will need to update the cgroupdriver on all nodes. You can do it by creating the following file:
+Next, you will need to update the cgroupdriver
 ```bash
 nano /etc/docker/daemon.json
 ```
@@ -76,7 +75,7 @@ systemctl restart docker
 systemctl enable docker
 ```
 
-On the main server only run the following commands: 
+# On the main server only run the following commands: 
 
 ## Step 4: Initialize Kubernetes
 ```bash
@@ -97,14 +96,17 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
 ```
-Go back to your other two servers and run this:
+
+# Go back to your worker nodes (not the main):
+
 ## Step 7 – Join Worker Nodes to the Kubernetes Cluster
 Your cubeadm join command should look like this:
 ```bash
 kubeadm join 192.168.1.1:6989 --token blahhhxx5t2f66cpqz8e --discovery-token-ca-cert-hash shaxxxxxxxxxxxxxxxxxxxx
 ```
 
-Go back to main server and validate
+# Go back to main server and validate
+
 ## Step 8: Verify Installation
 ```bash
 kubectl get pods --all-namespaces
