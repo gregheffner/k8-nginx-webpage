@@ -1,4 +1,4 @@
-# Kubernetes Installation Guide on Ubuntu 22.04
+# Kuberbetes (K8) nginx webpage
 
 There are 3 readme.md files (steps) in this repo. This one shows how to install. The second step configures the cluster. The third step sets up monitoring with Lens. 
 
