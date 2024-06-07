@@ -2,6 +2,8 @@
 
 There are 3 readme.md files (steps) in this repo. This one shows how to install. The second step configures the cluster. The third step sets up monitoring with Lens. 
 
+Check out the kubernetes_glossary.pdf for reference on any terms
+
 ## Prerequisites
 1. Three servers running an Ubuntu OS I used a VM and 2 physical PC's reimaged 
 2. Minimum 2 GB RAM and 2 Core CPUs on each node
