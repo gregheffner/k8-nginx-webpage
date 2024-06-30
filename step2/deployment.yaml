@@ -39,7 +39,7 @@ spec:
       - env:
         - name: DEPLOY_DATE
           value: Fri May 24 01:22:17 PM EDT 2024
-        image: technotuba/nginx:initial
+        image: technotuba/nginx:v1
         imagePullPolicy: Always
         name: nginx
         resources:
