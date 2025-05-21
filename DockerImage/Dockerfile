@@ -2,6 +2,7 @@ FROM nginx:1.27.5-alpine-slim
 
 LABEL description="Built by technotuba for K8s NGINX WWW"
 LABEL maintainer="main.plan5783@fastmail.com"
+LABEL ClusterAge="Fri May 24 01:22:17 PM EDT 2024"
 LABEL source="https://github.com/gregheffner/k8-nginx-webpage"
 
 ENV NGINX_VERSION=1.28.0 \
