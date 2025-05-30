@@ -1,0 +1,21 @@
+[nginx-404]
+enabled = true
+port    = http,https
+filter  = nginx-404
+logpath = /var/log/nginx/access.log
+action = cloudflare-ban[name=cloudflare-ban]
+actionunban =
+maxretry = 10
+findtime = 60
+bantime = 600
+
+[nginx-botsearch]
+enabled = true
+port    = http,https
+filter  = nginx-botsearch
+logpath = /var/log/nginx/access.log
+action = cloudflare-ban[name=cloudflare-ban]
+actionunban =
+maxretry = 2
+findtime = 60
+bantime = 600
